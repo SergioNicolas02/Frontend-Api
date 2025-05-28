@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema Drive - Colección de Películas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<body>
+
+  <div class="container">
+    <h1>Cinema Drive</h1>
+    <p class="subtitle">Tu colección de películas de autos</p>
+
+  <div class="card form-card">
+    <form id="movieForm">
+      <input type="hidden" id="movieId">
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Nombre de la película" required>
+      </div>
+      <div class="form-group">
+        <input type="number" id="year" placeholder="Año" required>
+      </div>
+      <div class="form-group">
+        <input type="number" id="duration" placeholder="Duración (min)" required>
+      </div>
+      <div class="button-group">
+        <button type="submit" class="btn-primary">Guardar</button>
+        <button type="button" class="btn-secondary" onclick="clearForm()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Año</th>
+          <th>Duración</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="movieTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
